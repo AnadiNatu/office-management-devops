@@ -1,0 +1,28 @@
+# Git / CI
+.git
+.github
+.gitignore
+
+# Secrets
+.env
+.env.*
+!.env.example
+secrets
+certs
+infra/letsencrypt
+infra/certbot
+
+# Build output
+**/target
+**/node_modules
+**/dist
+
+# IDE / OS
+.idea
+.vscode
+*.iml
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

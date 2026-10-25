@@ -1,0 +1,39 @@
+# =============================================================================
+# .gitignore  —  Place in your project root AND in devops/ folder
+# =============================================================================
+# ── SECRETS — most important section ─────────────────────────
+# These files hold real credentials for local and production.
+# Templates (.env.example, .env.prod.example) ARE committed.
+# The actual secret files are NEVER committed.
+**/application.properties
+**/application.yml
+**/application-local.properties
+**/application-local.yml
+
+# ✅ ALLOW — only contain ${ENV_VAR} placeholders, safe to commit
+!**/application-docker.properties
+!**/application-prod.properties
+
+# ── Secrets & credentials ─────────────────────────────────────
+# Environment files
+.env
+.env.local
+.env.prod
+.env.staging
+
+# Allow templates
+!.env.example
+!.env.prod.example
+!.env.staging.example
+
+# ── Built JARs ───────────────────────────────────────────────────────────────
+**/target/*.jar
+**/target/
+
+# ── Docker volumes ────────────────────────────────────────────────────────────
+postgres-data/
+
+# ── OS / IDE ──────────────────────────────────────────────────────────────────
+.DS_Store
+.idea/
+*.iml

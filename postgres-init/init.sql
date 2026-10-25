@@ -1,0 +1,2 @@
+CREATE DATABASE "MultiUserDB";
+CREATE DATABASE "OfficeManagementDB";
